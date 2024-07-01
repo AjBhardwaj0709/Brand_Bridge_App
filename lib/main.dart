@@ -1,3 +1,5 @@
+import 'package:brandbridge/Core/navigation/app_route_names.dart';
+import 'package:brandbridge/Core/navigation/app_router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,8 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
+      initialRoute: RouteNames.splashScreen,
+      onGenerateRoute: AppRoutes.generateRoute,
     );
   }
 }
-
