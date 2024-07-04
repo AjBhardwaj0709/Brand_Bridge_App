@@ -14,40 +14,29 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
   @override
   void initState() {
     super.initState();
-    _dispatchEvent(context); // This will dispatch the navigateToHomeScreen event.
+    _dispatchEvent(
+        context); // This will dispatch the navigateToHomeScreen event.
   }
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width,
-      child: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            // Here place your app logo, tagline etc..
-            Center(
-              child: Text(
-                'LOGO',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 60,
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(
-                top: 30,
-                bottom: 30,
-              ),
-            ),
-            // Here place a gif or a loader as I did.
-            CircularProgressIndicator(
-              backgroundColor: Colors.white,
-            ),
-          ],
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color(0xff09203f),
+              Color(0xff537895),
+            ],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
+        child: const Center(
+          child: Text(
+            "Brand Bridge",
+            style: TextStyle(fontSize: 34, color: Colors.white),
+          ),
         ),
       ),
     );

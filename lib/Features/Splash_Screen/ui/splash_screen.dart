@@ -14,6 +14,8 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   final SplashScreenBloc _splashBloc = SplashScreenBloc();
 
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +33,8 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Center(
           child: BlocBuilder<SplashScreenBloc, SplashScreenState>(
             builder: (context, state) {
-              if (state is SplashScreenInitial || state is SplashScreenLoading) {
+              if (state is SplashScreenInitial ||
+                  state is SplashScreenLoading) {
                 return const SplashScreenWidget();
               } else if (state is SplashScreenLoaded) {
                 return const HomeScreen();
