@@ -7,10 +7,10 @@ class SplashScreenWidget extends StatefulWidget {
   const SplashScreenWidget({super.key});
 
   @override
-  _SplashScreenWidgetState createState() => _SplashScreenWidgetState();
+  SplashScreenWidgetState createState() => SplashScreenWidgetState();
 }
 
-class _SplashScreenWidgetState extends State<SplashScreenWidget> {
+class SplashScreenWidgetState extends State<SplashScreenWidget> {
   @override
   void initState() {
     super.initState();

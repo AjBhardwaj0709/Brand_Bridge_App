@@ -1,5 +1,9 @@
 import 'package:brandbridge/Core/utils/colors.dart';
+import 'package:brandbridge/Core/utils/constants.dart';
+import 'package:brandbridge/Features/Chat%20Page/ui/chat.dart';
 import 'package:brandbridge/Features/Home/ui/home_page.dart';
+import 'package:brandbridge/Features/Profile%20Page/ui/profile.dart';
+import 'package:brandbridge/Features/Setting%20Page/ui/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -14,11 +18,10 @@ class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    // HomePage(),
-    // ChatPage(),
-    // ProfilePage(),
-    // SettingPage(),
     const HomeScreen(),
+    const ChatPage(),
+    const ProfilePage(),
+    const SettingPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -48,7 +51,7 @@ class _NavBarState extends State<NavBar> {
                   borderRadius: BorderRadius.circular(30),
                   boxShadow: const [
                     BoxShadow(
-                      color: Color(0xff09203f),
+                      color: Appcolors.navbar,
                       // spreadRadius: 2,
                       blurRadius: 20,
                       offset: Offset(0, 20),
@@ -64,10 +67,10 @@ class _NavBarState extends State<NavBar> {
                 padding: const EdgeInsets.all(16),
                 onTabChange: _onItemTapped,
                 tabs: const [
-                  GButton(icon: Icons.home, text: 'Home'),
-                  GButton(icon: Icons.chat, text: 'Chat'),
-                  GButton(icon: Icons.person, text: 'Profile'),
-                  GButton(icon: Icons.settings, text: 'Settings'),
+                  GButton(icon: Icons.home, text: AppText.homeText),
+                  GButton(icon: Icons.chat, text: AppText.chattext),
+                  GButton(icon: Icons.person, text: AppText.profileText),
+                  GButton(icon: Icons.settings, text: AppText.settingsText),
                 ],
               ),
             ),

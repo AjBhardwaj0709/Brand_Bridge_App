@@ -1,5 +1,7 @@
 // import 'package:brandbridge/Features/Internet%20Exception/bloc/internet_exception_bloc.dart';
 import 'package:brandbridge/Core/navigation/app_route_names.dart';
+import 'package:brandbridge/Core/utils/colors.dart';
+import 'package:brandbridge/Core/utils/constants.dart';
 import 'package:brandbridge/Features/Internet%20Exception/bloc/internet_exception_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,8 +18,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text('home'),
+        automaticallyImplyLeading: false,
+        title: const Text(AppText.appTitle,style: TextStyle(color: Colors.white),),
+        backgroundColor: Colors.transparent,
       ),
       body: BlocListener<InternetExceptionBloc, InternetExceptionState>(
         listener: (context, state) {
@@ -29,7 +34,9 @@ class _HomeScreenState extends State<HomeScreen> {
             RouteNames.internetException;
           }
         },
-        child: Container(),
+        child: Container(
+          decoration: BoxDecoration(gradient: Appcolors.gradientBackground),
+        ),
       ),
     );
   }

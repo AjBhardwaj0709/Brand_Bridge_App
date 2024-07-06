@@ -1,3 +1,5 @@
+import 'package:brandbridge/Core/utils/colors.dart';
+import 'package:brandbridge/Core/utils/constants.dart';
 import 'package:brandbridge/Features/Internet%20Exception/bloc/internet_exception_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -24,8 +26,8 @@ class _InternetExceptionState extends State<InternetException> {
               ));
             } else if (state is InternetExceptionLostState) {
               ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                content: Text("Internet is not connected"),
-                backgroundColor: Colors.red,
+                content: Text(AppText.internetExceptionText),
+                backgroundColor: Appcolors.internetExceptionColor,
               ));
             }
           },

@@ -1,4 +1,5 @@
-import 'package:brandbridge/Features/Home/ui/home_page.dart';
+// import 'package:brandbridge/Features/Home/ui/home_page.dart';
+import 'package:brandbridge/Features/Nav%20Bar/navbar.dart';
 import 'package:brandbridge/Features/Splash_Screen/bloc/splash_screen_bloc.dart';
 import 'package:brandbridge/Features/Splash_Screen/ui/splash_screen_widget.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   state is SplashScreenLoading) {
                 return const SplashScreenWidget();
               } else if (state is SplashScreenLoaded) {
-                return const HomeScreen();
+                return const NavBar();
               } else {
                 // Handle unexpected states
                 return Text('Unexpected state: $state');

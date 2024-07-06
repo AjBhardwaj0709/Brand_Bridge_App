@@ -24,4 +24,7 @@ class Appcolors {
   static const Color textColor = Color(0xFFFFFFFF);
   //Button Text Color
   static const Color buttontextColor = Color(0x00000000);
+
+  // Internet Exception Color
+  static const Color internetExceptionColor = Colors.red;
 }
