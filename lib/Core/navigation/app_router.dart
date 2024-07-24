@@ -1,8 +1,8 @@
 import 'package:brandbridge/Core/navigation/app_route_names.dart';
 import 'package:brandbridge/Core/widgets/something_went_wrong_widget.dart';
 import 'package:brandbridge/Features/Pages/Home/ui/home_page.dart';
-import 'package:brandbridge/Features/Internet%20Exception/ui/internet_exception.dart';
-import 'package:brandbridge/Features/Nav%20Bar/navbar.dart';
+import 'package:brandbridge/Core/error/Internet%20Exception/ui/internet_exception.dart';
+import 'package:brandbridge/Features/Pages/Nav%20Bar/navbar.dart';
 import 'package:brandbridge/Features/Pages/SignUp/ui/signup.dart';
 import 'package:brandbridge/Features/Pages/Splash_Screen/ui/splash_screen.dart';
 import 'package:brandbridge/Features/Pages/login/ui/login_page.dart';

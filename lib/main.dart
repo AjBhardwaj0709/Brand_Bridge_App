@@ -1,15 +1,13 @@
-import 'package:brandbridge/Features/Pages/Home/ui/home_page.dart';
-import 'package:brandbridge/Features/Nav%20Bar/navbar.dart';
+import 'package:brandbridge/Features/Pages/Nav%20Bar/navbar.dart';
 import 'package:brandbridge/Features/Pages/Splash_Screen/ui/splash_screen.dart';
 import 'package:brandbridge/Features/authentication/bloc/authentication_bloc.dart';
 import 'package:brandbridge/Features/Pages/login/ui/login_page.dart';
 import 'package:brandbridge/Services/auth_service.dart';
-// import 'package:brandbridge/Services/authentication_repo.dart';
 import 'package:brandbridge/Services/authentication_repo.dart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:brandbridge/Core/navigation/app_router.dart';
-import 'package:brandbridge/Features/Internet%20Exception/bloc/internet_exception_bloc.dart';
+import 'package:brandbridge/Core/error/Internet%20Exception/bloc/internet_exception_bloc.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 

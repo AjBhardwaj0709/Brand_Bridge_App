@@ -1,6 +1,6 @@
 import 'package:brandbridge/Core/utils/colors.dart';
 import 'package:brandbridge/Core/utils/constants.dart';
-import 'package:brandbridge/Features/Internet%20Exception/bloc/internet_exception_bloc.dart';
+import 'package:brandbridge/Core/error/Internet%20Exception/bloc/internet_exception_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
