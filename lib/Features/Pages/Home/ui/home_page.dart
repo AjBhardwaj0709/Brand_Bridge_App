@@ -21,22 +21,24 @@ class _HomeScreenState extends State<HomeScreen> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text(AppText.appTitle,style: TextStyle(color: Colors.white),),
+        title: const Text(
+          AppText.appTitle,
+          style: TextStyle(color: Colors.white),
+        ),
         backgroundColor: Colors.transparent,
       ),
-      body: BlocListener<InternetExceptionBloc, InternetExceptionState>(
-        listener: (context, state) {
-          if (state is InternetExceptionLostState) {
-            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                content: Text("Internet is connected"),
-                backgroundColor: Colors.green));
-          } else if (state is InternetExceptionGainState) {
-            RouteNames.internetException;
-          }
-        },
-        child: Container(
-          decoration: BoxDecoration(gradient: Appcolors.gradientBackground),
-        ),
+      // body: BlocListener<InternetExceptionBloc, InternetExceptionState>(
+      //   listener: (context, state) {
+      //     if (state is InternetExceptionLostState) {
+      //       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+      //           content: Text("Internet is connected"),
+      //           backgroundColor: Colors.green));
+      //     } else if (state is InternetExceptionGainState) {
+      //       RouteNames.internetException;
+      //     }
+      //   },
+      body: Container(
+        decoration: BoxDecoration(gradient: Appcolors.gradientBackground),
       ),
     );
   }

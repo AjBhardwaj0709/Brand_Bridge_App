@@ -27,4 +27,7 @@ class Appcolors {
 
   // Internet Exception Color
   static const Color internetExceptionColor = Colors.red;
+
+  // label color
+  static const Color hinttextColor = Colors.grey;
 }

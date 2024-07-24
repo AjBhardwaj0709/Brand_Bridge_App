@@ -12,7 +12,7 @@ class SplashScreenBloc extends Bloc<SplashScreenEvent, SplashScreenState> {
   void _onNavigateToHomeScreenEvent(
       NavigateToHomeScreenEvent event, Emitter<SplashScreenState> emit) async {
     emit(SplashScreenLoading());
-    await Future.delayed(const Duration(seconds: 4));
+    await Future.delayed(const Duration(seconds: 2));
     emit(SplashScreenLoaded());
   }
 }

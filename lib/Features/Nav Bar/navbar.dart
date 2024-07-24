@@ -1,9 +1,9 @@
 import 'package:brandbridge/Core/utils/colors.dart';
 import 'package:brandbridge/Core/utils/constants.dart';
-import 'package:brandbridge/Features/Chat%20Page/ui/chat.dart';
-import 'package:brandbridge/Features/Home/ui/home_page.dart';
-import 'package:brandbridge/Features/Profile%20Page/ui/profile.dart';
-import 'package:brandbridge/Features/Setting%20Page/ui/settings.dart';
+import 'package:brandbridge/Features/Pages/Chat%20Page/ui/chat.dart';
+import 'package:brandbridge/Features/Pages/Home/ui/home_page.dart';
+import 'package:brandbridge/Features/Pages/Profile%20Page/ui/profile.dart';
+import 'package:brandbridge/Features/Pages/Setting%20Page/ui/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 

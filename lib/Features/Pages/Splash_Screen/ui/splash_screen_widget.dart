@@ -1,3 +1,4 @@
+import 'package:brandbridge/Core/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -35,7 +36,7 @@ class SplashScreenWidgetState extends State<SplashScreenWidget> {
         child: const Center(
           child: Text(
             "Brand Bridge",
-            style: TextStyle(fontSize: 34, color: Colors.white),
+            style: TextStyle(fontSize: 34, color: Appcolors.primaryColor),
           ),
         ),
       ),

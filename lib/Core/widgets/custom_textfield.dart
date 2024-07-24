@@ -23,9 +23,10 @@ class MyTextField extends StatelessWidget {
       style: const TextStyle(color: Appcolors.textColor),
       decoration: InputDecoration(
         labelText: labelText,
-        labelStyle: const TextStyle(color: Appcolors.textColor),
+        labelStyle: const TextStyle(color: Appcolors.primaryColor),
+        floatingLabelBehavior: FloatingLabelBehavior.always,
         hintText: hintText,
-        hintStyle: const TextStyle(color: Appcolors.textColor),
+        hintStyle: const TextStyle(color: Appcolors.hinttextColor),
         enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(100)),
             borderSide: BorderSide(color: Appcolors.primaryColor, width: 3.0)),

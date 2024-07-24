@@ -31,6 +31,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+    
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -56,6 +58,7 @@ dependencies:
   injectable: ^1.5.3
   connectivity_plus: ^6.0.3
   http: ^1.2.1
+  web_socket_channel: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -75,6 +78,9 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+
+  assets:
+    - assets/image/google.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -101,7 +107,7 @@ flutter:
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  #      - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

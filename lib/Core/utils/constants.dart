@@ -1,6 +1,12 @@
+import 'package:flutter/material.dart';
+
 class AppText {
   //App title name
   static const String appTitle = 'Brand Brand';
+
+  //Local Host Api
+
+  static String uri = "http://localhost:3000";
 
   // Splash Screen Text
 
@@ -13,7 +19,7 @@ class AppText {
 // Sign Up Screen
   static const signUpText = "Sign Up";
   static const confirmPasswordText = "Confirm Password";
-  
+
 // Logout Text
   static const logoutText = "Logout";
 
@@ -25,4 +31,12 @@ class AppText {
   static const settingsText = "Settings";
   static const profileText = "Profile";
   static const chattext = "Chat";
+}
+
+// hieght & Width
+class AppSize {
+  static double screenHeight(BuildContext context) =>
+      MediaQuery.of(context).size.height;
+  static double screenWidth(BuildContext context) =>
+      MediaQuery.of(context).size.width;
 }

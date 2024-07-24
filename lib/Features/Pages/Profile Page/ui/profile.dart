@@ -16,6 +16,7 @@ class ProfilePage extends StatelessWidget {
       
       body: Container(
         decoration: BoxDecoration(gradient: Appcolors.gradientBackground),
+        
       ),
     );
   }

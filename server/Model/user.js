@@ -8,6 +8,7 @@ const userSchema = mongoose.Schema({
     },
     email: {
         required: true,
+        unique: true,
         type: String,
         trim: true,
         validate: {
@@ -19,11 +20,11 @@ const userSchema = mongoose.Schema({
         },
     },
     password: {
-        required: true,
         type: String,
-
+        required: true,
+        minlength: 6,
     },
 
-});
-const Users = mongoose.model("User", userSchema);
+}, {timestamps:true});
+const Users = mongoose.model("Users", userSchema);
 module.exports = Users;
