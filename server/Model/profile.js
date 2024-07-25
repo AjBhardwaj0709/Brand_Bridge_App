@@ -1,11 +1,24 @@
-// models/profile.js
 const mongoose = require('mongoose');
 
-const profileSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    username: { type: String, required: true, unique: true },
-    bio: { type: String, default: '' },
-    //   profileImage: { type: String, default: '' }, // URL or path to profile image
-});
+const profileSchema = mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+    username: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    bio: {
+        type: String,
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Users',
+        required: true,
+    }
+}, { timestamps: true });
 
-module.exports = mongoose.model('Profile', profileSchema);
+const Profile = mongoose.model('Profile', profileSchema);
+module.exports = Profile;
