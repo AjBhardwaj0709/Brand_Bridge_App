@@ -19,6 +19,7 @@ class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _usernameController = TextEditingController();
 
   @override
   void dispose() {
@@ -36,7 +37,8 @@ class _SignUpPageState extends State<SignUpPage> {
         listener: (context, state) {
           if (state is SignUpSuccessState) {
             ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text('Sign up successful! Login to continue')),
+              const SnackBar(
+                  content: Text('Sign up successful! Login to continue')),
             );
             Navigator.of(context).pushReplacementNamed(RouteNames.loginScreen);
           } else if (state is SignUpFaliureState) {
@@ -106,6 +108,15 @@ class _SignUpPageState extends State<SignUpPage> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         MyTextField(
+            hintText: 'Unique username',
+            icon: Icons.person_2_outlined,
+            labelText: "Username",
+            obscuretext: false,
+            controller: _usernameController),
+        const SizedBox(
+          height: 16,
+        ),
+        MyTextField(
           hintText: 'Enter your name',
           icon: Icons.person,
           labelText: "Name",
@@ -130,19 +141,20 @@ class _SignUpPageState extends State<SignUpPage> {
         ),
         const SizedBox(height: 24),
         MyButton(
-          text: "Sign Up",
+          text: "Register",
           height: 50,
           width: double.infinity,
           isLoading: state is SignUpLoadingState,
           onPressed: () {
             if (_validateInputs(context)) {
               context.read<SignUpBloc>().add(
-                SignUpButtonPressedEvent(
-                  name: _nameController.text.trim(),
-                  email: _emailController.text.trim(),
-                  password: _passwordController.text,
-                ),
-              );
+                    SignUpButtonPressedEvent(
+                      username: _usernameController.text.trim(),
+                      name: _nameController.text.trim(),
+                      email: _emailController.text.trim(),
+                      password: _passwordController.text,
+                    ),
+                  );
             }
           },
         ),
@@ -152,7 +164,8 @@ class _SignUpPageState extends State<SignUpPage> {
             Expanded(child: Divider(thickness: 0.5, color: Colors.black)),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 10.0),
-              child: Text("or continue with", style: TextStyle(color: Appcolors.textColor)),
+              child: Text("or continue with",
+                  style: TextStyle(color: Appcolors.textColor)),
             ),
             Expanded(child: Divider(thickness: 0.5, color: Colors.black)),
           ],
@@ -165,11 +178,16 @@ class _SignUpPageState extends State<SignUpPage> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text("Already have an account?", style: TextStyle(color: Appcolors.textColor)),
+            const Text("Already have an account?",
+                style: TextStyle(color: Appcolors.textColor)),
             const SizedBox(width: 5),
             GestureDetector(
-              onTap: () => Navigator.pushReplacementNamed(context, RouteNames.loginScreen),
-              child: const Text('Login', style: TextStyle(fontWeight: FontWeight.bold, color: Appcolors.primaryColor)),
+              onTap: () => Navigator.pushReplacementNamed(
+                  context, RouteNames.loginScreen),
+              child: const Text('Login',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Appcolors.primaryColor)),
             ),
           ],
         ),

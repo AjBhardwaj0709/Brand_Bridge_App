@@ -9,10 +9,16 @@ authRouters.post("/api/signup", async (req, res) => {
     console.log("Signup route hit", req.body);
     try {
         console.log("Received signup request", req.body);
-        const { name, email, password } = req.body;
+        const { name, email, password,username } = req.body;
 
         const existingUser = await Users.findOne({ email });
         console.log("Existing user check complete", existingUser);
+
+        const existingUsername = await Users.findOne({ username });
+        console.log("Existing user check complete", existingUsername);
+        if (existingUser) {
+            return res.status(400).json({ msg: "Username already exists!" }); 
+        }
 
         if (existingUser) {
             return res.status(400).json({ msg: "User already exists!" });
@@ -24,6 +30,7 @@ authRouters.post("/api/signup", async (req, res) => {
         let newUser = new Users({
             name,
             email,
+            username,
             password: hashedPassword,
         });
 

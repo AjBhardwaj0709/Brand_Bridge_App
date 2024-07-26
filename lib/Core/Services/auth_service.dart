@@ -40,6 +40,7 @@ class AuthService {
 
   //sign Up User
   Future<String?> signUpUser({
+  required String username,
   required String name,
   required String email,
   required String password,
@@ -51,6 +52,7 @@ class AuthService {
         'Content-Type': 'application/json; charset=UTF-8',
       },
       body: jsonEncode(<String, String>{
+        'username': username,
         'name': name,
         'email': email,
         'password': password,

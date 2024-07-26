@@ -16,6 +16,7 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
     emit(SignUpLoadingState());
     try {
       await authService.signUpUser(
+        username: event.username,
         name: event.name,
         email: event.email,
         password: event.password,

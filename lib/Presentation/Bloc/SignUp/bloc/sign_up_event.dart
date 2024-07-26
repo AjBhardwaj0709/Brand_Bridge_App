@@ -7,10 +7,12 @@ class SignUpButtonPressedEvent extends SignUpEvent {
   final String email;
   final String password;
   final String name;
+  final String username;
 
   SignUpButtonPressedEvent({
     required this.email,
     required this.password,
     required this.name,
+    required this.username,
   });
 }
